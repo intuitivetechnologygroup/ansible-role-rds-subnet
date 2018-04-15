@@ -1,0 +1,8 @@
+---
+- name: create a rds subnet group
+  rds_subnet_group:
+    state: present
+    name: "{{ rds_subnet_group_name }}"
+    region: "{{ rds_region }}"
+    description: "{{ rds_subnet_group_description }}"
+    subnets: "{{ vpc_subnets }}"
